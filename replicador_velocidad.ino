@@ -42,17 +42,17 @@ ISR(TIMER2_OVF_vect){
       if(a>=param_vel) //Contador velocidad
       {        
         a=0;        
-        PORTB = PORTB^B0010000;        
+        PORTB = PORTB^B00100000;        
       }   
       if(b>=1) //Contador RPM
       {
         b=0;        
-        PORTB = PORTB^B0100000;        
+        PORTB = PORTB^B01000000;        
       } 
       if(c>=1) //Contador consumo
       {
         c=0;        
-        PORTB = PORTB^B1000000;        
+        PORTB = PORTB^B10000000;        
       }    
       TCNT2=Tiempo;
 }
